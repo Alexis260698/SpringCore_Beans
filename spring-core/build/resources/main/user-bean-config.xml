@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.example.springcoredojo.*"/>
+
+    <bean id="youtuber" class="com.example.springcoredojo.EjercicioSC.Youtuber">
+           <property name="nombre" value="Mr Best"></property>
+    </bean>
+
+
+    <bean id="Alumno" class="com.example.springcoredojo.EjercicioSC.Alumno">
+        <property name="nombre" value="Jose"></property>
+        <property name="apellido" value="Diaz"></property>
+        <property name="edad" value="25"></property>
+    </bean>
+
+    <bean id="Usuario" class="com.example.springcoredojo.EjercicioSC.Usuario">
+        <property name="alumno" ref="Alumno"></property>
+    </bean>
+</beans>
